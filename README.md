@@ -42,12 +42,13 @@ dpkg -la | grep gcm-linux
 
 dpkg -l gcm
 
-pub   rsa3072 2025-09-23 [SC] [expires: 2027-09-23]
-      4C9769392B03594E966A1E8B312B5594C09BB5BB
-uid                      linuxforce <nobru05@hotmail.com>
-sub   rsa3072 2025-09-23 [E] [expires: 2027-09-23]
 
 gpg --list-keys
 
 git status
+
+git config --global user.name "Your Name"
+git config --global user.email you@example.com
+
+git commit --amend --reset-author
 
