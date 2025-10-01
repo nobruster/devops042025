@@ -5,6 +5,10 @@ Vagrant.configure("2") do |config|
     controle.vm.box = "shekeriev/debian-11"
     controle.vm.hostname = "controle"
     controle.vm.network "private_network", ip: "192.168.56.100"
+    
+    #  Adicione esta linha para expor o Jenkins no host
+    controle.vm.network "forwarded_port", guest: 8080, host: 18080
+
     controle.vm.provider "virtualbox" do |vb|
         vb.memory = "6144"
         vb.cpus = 2
